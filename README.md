@@ -1,20 +1,22 @@
-# Pixel Portfolio - Frontend
+# Portfolio Website - Frontend
 
-A pixel art styled full-stack portfolio website built with React.
+A modern portfolio website built with React featuring Apple Design aesthetics.
 
 ## Live Demo
 
-- **Frontend**: [Your deployed frontend URL]
-- **Backend API**: [Your deployed backend URL]
+- **Live Frontend URL**: https://frontend-liu-jiahuis-projects.vercel.app
+- **Live Backend API URL**: https://backend-liu-jiahuis-projects.vercel.app
+- **Source Code**: https://github.com/ljh-12357/web-app-frontend
 
 ## Features
 
-- Pixel art retro gaming aesthetic
-- Responsive design
+- Clean, minimal Apple Design aesthetic
+- Glassmorphism UI effects
+- Responsive design for all devices
 - User authentication (Login/Register)
 - Protected admin dashboard
 - Project portfolio management
-- Blog with comments
+- Blog with comments system
 - Contact form
 
 ## Tech Stack
@@ -23,7 +25,7 @@ A pixel art styled full-stack portfolio website built with React.
 - React Router v7
 - Axios for API calls
 - Context API for state management
-- CSS with pixel art styling
+- CSS with Apple Design styling
 
 ## Pages
 
@@ -32,7 +34,7 @@ A pixel art styled full-stack portfolio website built with React.
 | `/` | Home/About page | Public |
 | `/projects` | Projects gallery | Public |
 | `/blog` | Blog posts list | Public |
-| `/blog/:id` | Blog post detail | Public |
+| `/blog/:id` | Blog post detail with comments | Public |
 | `/contact` | Contact form | Public |
 | `/login` | Login page | Public |
 | `/register` | Register page | Public |
@@ -44,14 +46,13 @@ A pixel art styled full-stack portfolio website built with React.
 
 - Node.js (v18+)
 - npm or yarn
-- Backend API running (see backend README)
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd frontend
+   git clone https://github.com/ljh-12357/web-app-frontend.git
+   cd web-app-frontend
    ```
 
 2. Install dependencies:
@@ -59,22 +60,39 @@ A pixel art styled full-stack portfolio website built with React.
    npm install
    ```
 
-3. Create `.env` file:
-   ```bash
-   cp .env.example .env
+3. Create `.env` file in the root directory:
+   ```
+   VITE_API_URL=http://localhost:5001/api
    ```
 
-4. Update the `.env` file with your backend API URL:
-   ```
-   VITE_API_URL=http://localhost:5000/api
-   ```
-
-5. Start the development server:
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-6. Open http://localhost:5173 in your browser
+5. Open http://localhost:5173 in your browser
+
+### Connecting to the Backend API
+
+**For Local Development:**
+
+1. First, clone and run the backend API:
+   ```bash
+   git clone https://github.com/ljh-12357/web-app-backend.git
+   cd web-app-backend
+   npm install
+   npm run dev
+   ```
+
+2. Update your frontend `.env` file:
+   ```
+   VITE_API_URL=http://localhost:5001/api
+   ```
+
+**For Production (using deployed API):**
+```
+VITE_API_URL=https://backend-liu-jiahuis-projects.vercel.app/api
+```
 
 ### Building for Production
 
@@ -112,28 +130,14 @@ frontend/
 │   │   └── pixel.css
 │   ├── App.jsx
 │   └── main.jsx
-├── .env
 ├── .env.example
 └── package.json
 ```
 
-## Deployment
+## Test Account
 
-### Vercel
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Set environment variable:
-   - `VITE_API_URL` = Your deployed backend URL
-
-### Netlify
-
-1. Push your code to GitHub
-2. Import project in Netlify
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-5. Set environment variable:
-   - `VITE_API_URL` = Your deployed backend URL
+- **Email**: admin@example.com
+- **Password**: admin123456
 
 ## Admin Features
 
@@ -143,19 +147,18 @@ Once logged in, the admin dashboard allows you to:
 - **Manage Blog Posts**: Create, edit, and delete blog posts
 - All changes are immediately reflected on the public pages
 
-## Connecting to Backend
+## Deployment
 
-Make sure your backend API is running and the `VITE_API_URL` environment variable points to the correct URL.
+The frontend is deployed on Vercel. To deploy your own:
 
-For local development:
-```
-VITE_API_URL=http://localhost:5000/api
-```
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Set environment variable:
+   - `VITE_API_URL` = Your deployed backend URL (e.g., `https://backend-liu-jiahuis-projects.vercel.app/api`)
 
-For production (example):
-```
-VITE_API_URL=https://your-api.onrender.com/api
-```
+## Related Repository
+
+- **Backend API**: https://github.com/ljh-12357/web-app-backend
 
 ## License
 
