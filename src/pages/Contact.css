@@ -1,3 +1,4 @@
+/* Apple Design Contact Page */
 .contact-page {
   min-height: calc(100vh - 200px);
 }
@@ -5,7 +6,7 @@
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -22,33 +23,44 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 107, 157, 0.2);
 }
 
 .info-icon {
-  color: var(--pixel-cyan);
-  font-size: 10px;
+  color: var(--pixel-pink);
+  font-size: 14px;
+  font-weight: 500;
   min-width: 100px;
 }
 
 .info-text {
-  color: var(--pixel-light-gray);
-  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
 }
 
 .status-available {
-  color: var(--pixel-green);
-  animation: blink 2s infinite;
+  color: var(--pixel-mint);
 }
 
 .social-section {
-  margin-top: 20px;
+  margin-top: 32px;
 }
 
 .social-title {
-  color: var(--pixel-yellow);
-  font-size: 10px;
-  margin-bottom: 16px;
+  color: var(--pixel-white);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .social-buttons {
