@@ -1,0 +1,131 @@
+.blog-detail-page {
+  min-height: calc(100vh - 200px);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--pixel-cyan);
+  text-decoration: none;
+  font-size: 10px;
+  margin-bottom: 24px;
+  padding: 8px 0;
+  transition: all 0.2s;
+}
+
+.back-link:hover {
+  color: var(--pixel-pink);
+}
+
+.blog-article {
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.article-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 4px dashed var(--pixel-gray);
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.article-date {
+  color: var(--pixel-pink);
+  font-size: 10px;
+  padding: 4px 12px;
+  background-color: var(--pixel-black);
+  border: 2px solid var(--pixel-pink);
+}
+
+.article-author {
+  color: var(--pixel-green);
+  font-size: 10px;
+}
+
+.article-title {
+  color: var(--pixel-cyan);
+  font-size: 18px;
+  line-height: 1.8;
+  text-shadow: 2px 2px 0px var(--pixel-purple);
+}
+
+.article-content {
+  font-size: 10px;
+  line-height: 2.5;
+  color: var(--pixel-light-gray);
+}
+
+.article-content p {
+  margin-bottom: 20px;
+}
+
+/* Comments Section */
+.comments-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comment-form {
+  margin-bottom: 24px;
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.login-prompt p {
+  color: var(--pixel-light-gray);
+  font-size: 10px;
+  margin-bottom: 16px;
+}
+
+.no-comments {
+  text-align: center;
+  color: var(--pixel-gray);
+  font-size: 10px;
+  padding: 24px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-item {
+  padding: 16px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.comment-author {
+  color: var(--pixel-cyan);
+  font-size: 10px;
+}
+
+.comment-date {
+  color: var(--pixel-gray);
+  font-size: 8px;
+}
+
+.comment-body {
+  color: var(--pixel-light-gray);
+  font-size: 9px;
+  line-height: 2.2;
+}

@@ -1,0 +1,179 @@
+/* Kawaii Header Styling */
+.pixel-header {
+  background: linear-gradient(180deg, var(--pixel-dark) 0%, rgba(61, 43, 61, 0.95) 100%);
+  border-bottom: 4px solid var(--pixel-pink);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.3);
+}
+
+.pixel-header::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent,
+    var(--pixel-light-pink),
+    var(--pixel-pink),
+    var(--pixel-hot-pink),
+    var(--pixel-pink),
+    var(--pixel-light-pink),
+    transparent
+  );
+  opacity: 0.5;
+}
+
+.pixel-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pixel-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.logo-bracket {
+  color: var(--pixel-hot-pink);
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.logo-text {
+  color: var(--pixel-light-pink);
+  margin: 0 4px;
+  text-shadow: 2px 2px 0px var(--pixel-purple);
+}
+
+.pixel-logo:hover .logo-text {
+  text-shadow: 0 0 15px var(--pixel-pink), 2px 2px 0px var(--pixel-purple);
+  color: var(--pixel-white);
+}
+
+.pixel-logo:hover .logo-bracket {
+  color: var(--pixel-pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--pixel-white);
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 10px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--pixel-pink);
+  transition: all 0.2s;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--pixel-light-pink);
+  border-color: var(--pixel-pink);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-admin {
+  color: var(--pixel-baby-pink);
+  background: rgba(255, 107, 157, 0.1);
+}
+
+.nav-admin:hover {
+  color: var(--pixel-hot-pink);
+  border-color: var(--pixel-hot-pink);
+  background: rgba(255, 107, 157, 0.2);
+}
+
+.nav-user {
+  color: var(--pixel-mint);
+  font-size: 8px;
+  padding: 4px 8px;
+  background: rgba(152, 255, 152, 0.1);
+  border: 2px solid var(--pixel-mint);
+  animation: gentlePulse 2s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(152, 255, 152, 0.3); }
+  50% { box-shadow: 0 0 15px rgba(152, 255, 152, 0.5); }
+}
+
+.pixel-btn-small {
+  font-size: 8px;
+  padding: 8px 12px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  background: linear-gradient(180deg, var(--pixel-pink) 0%, var(--pixel-purple) 100%);
+  border: 2px solid var(--pixel-light-pink);
+  color: var(--pixel-white);
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-menu-btn:hover {
+  background: linear-gradient(180deg, var(--pixel-hot-pink) 0%, var(--pixel-pink) 100%);
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 16px;
+    border-top: 2px dashed var(--pixel-pink);
+    margin-top: 16px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px;
+  }
+}

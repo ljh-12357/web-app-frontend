@@ -1,0 +1,116 @@
+/* Kawaii Project Card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--pixel-glow), 4px 4px 0px var(--pixel-purple);
+}
+
+.project-card::after {
+  content: '♥';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: var(--pixel-hot-pink);
+  font-size: 14px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 4px solid var(--pixel-pink);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.project-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 107, 157, 0.1) 100%);
+  pointer-events: none;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--pixel-pink) 0%, var(--pixel-purple) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pixel-white);
+  font-size: 12px;
+  position: relative;
+}
+
+.project-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  border: 2px dashed var(--pixel-light-pink);
+  opacity: 0.3;
+}
+
+.project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  color: var(--pixel-light-pink);
+  font-size: 12px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 0px var(--pixel-purple);
+}
+
+.project-description {
+  color: var(--pixel-light-gray);
+  font-size: 8px;
+  line-height: 2;
+  flex: 1;
+  margin-bottom: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

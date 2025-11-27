@@ -1,0 +1,129 @@
+.admin-page {
+  min-height: calc(100vh - 200px);
+}
+
+.admin-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.admin-welcome {
+  color: var(--pixel-green);
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.admin-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 16px 32px;
+  background-color: var(--pixel-dark);
+  color: var(--pixel-light-gray);
+  border: 4px solid var(--pixel-gray);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  border-color: var(--pixel-cyan);
+  color: var(--pixel-cyan);
+}
+
+.tab-btn.active {
+  background-color: var(--pixel-purple);
+  border-color: var(--pixel-cyan);
+  color: var(--pixel-white);
+  box-shadow: var(--pixel-shadow);
+}
+
+.admin-section {
+  margin-bottom: 40px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.admin-form-section {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.admin-list-section {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-item {
+  padding: 16px;
+}
+
+.item-title {
+  color: var(--pixel-cyan);
+  font-size: 10px;
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.item-meta {
+  color: var(--pixel-green);
+  font-size: 8px;
+  margin-bottom: 8px;
+}
+
+.item-preview {
+  color: var(--pixel-light-gray);
+  font-size: 8px;
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.empty-list {
+  color: var(--pixel-gray);
+  font-size: 10px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form-section {
+    position: static;
+  }
+
+  .admin-list-section {
+    max-height: none;
+  }
+}
